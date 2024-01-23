@@ -1,0 +1,47 @@
+###
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/alunos
+
+###
+POST http://localhost:3000/alunos/cadastro
+content-type: application/json
+
+{
+    "matricula": "1234555",
+    "nome": "Sampilina",
+    "email": "teste@email.com",
+    "turma": "B",
+    "serie": 1,
+    "sexo": "F",
+    "telefone": "(84)999991234",
+    "endereco": "Rua teste do teste",
+    "responsavel": "teste"
+}
+
+###
+GET http://localhost:3000/alunos/listarAlunos
+
+###
+GET http://localhost:3000/alunos/buscarAluno/12345
+
+###
+PUT http://localhost:3000/alunos/editarAluno/12345
+Content-Type: application/json
+
+{
+    "nome": "Natalina",
+    "email": "teste@email.com",
+    "turma": "B",
+    "serie": 1,
+    "sexo": "F",
+    "telefone": "(84)999991234",
+    "endereco": "Rua das renas do Natal, 25",
+    "responsavel": "Papai Noel"
+}
+
+###
+DELETE http://localhost:3000/alunos/deletarAluno/1234555
+
+###
